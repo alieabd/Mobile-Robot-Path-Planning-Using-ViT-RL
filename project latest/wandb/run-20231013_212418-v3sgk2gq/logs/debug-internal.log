@@ -1,0 +1,389 @@
+2023-10-13 21:24:18,811 INFO    StreamThr :91108 [internal.py:wandb_internal():86] W&B internal server running at pid: 91108, started at: 2023-10-13 21:24:18.810299
+2023-10-13 21:24:18,812 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status
+2023-10-13 21:24:18,814 INFO    WriterThread:91108 [datastore.py:open_for_write():85] open: G:\project\fifth_try\wandb\run-20231013_212418-v3sgk2gq\run-v3sgk2gq.wandb
+2023-10-13 21:24:18,815 DEBUG   SenderThread:91108 [sender.py:send():380] send: header
+2023-10-13 21:24:18,815 DEBUG   SenderThread:91108 [sender.py:send():380] send: run
+2023-10-13 21:24:19,552 ERROR   SenderThread:91108 [internal_api.py:execute():369] 403 response executing GraphQL.
+2023-10-13 21:24:19,553 ERROR   SenderThread:91108 [internal_api.py:execute():370] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>403 Forbidden</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Forbidden</h1>
+<h2>Your client does not have permission to get URL <code>/graphql</code> from this server.</h2>
+<h2></h2>
+</body></html>
+
+2023-10-13 21:24:19,553 ERROR   SenderThread:91108 [sender.py:send_run():977] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\sender.py", line 975, in send_run
+    self._init_run(run, config_value_dict)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\sender.py", line 1013, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 1950, in upsert_run
+    self.server_settings_introspection()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 581, in server_settings_introspection
+    res = self.gql(query)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\util.py", line 906, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-10-13 21:24:24,598 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:29,631 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:34,699 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:39,748 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:44,802 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:49,838 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:54,874 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:24:59,910 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:04,941 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:09,990 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:15,030 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:19,186 INFO    StreamThr :91108 [internal.py:wandb_internal():86] W&B internal server running at pid: 91108, started at: 2023-10-13 21:25:19.186545
+2023-10-13 21:25:19,188 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status
+2023-10-13 21:25:19,188 INFO    WriterThread:91108 [datastore.py:open_for_write():85] open: G:\project\fifth_try\wandb\run-20231013_212519-0483meln\run-0483meln.wandb
+2023-10-13 21:25:19,190 DEBUG   SenderThread:91108 [sender.py:send():380] send: header
+2023-10-13 21:25:19,190 DEBUG   SenderThread:91108 [sender.py:send():380] send: run
+2023-10-13 21:25:19,955 ERROR   SenderThread:91108 [internal_api.py:execute():369] 403 response executing GraphQL.
+2023-10-13 21:25:19,956 ERROR   SenderThread:91108 [internal_api.py:execute():370] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>403 Forbidden</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Forbidden</h1>
+<h2>Your client does not have permission to get URL <code>/graphql</code> from this server.</h2>
+<h2></h2>
+</body></html>
+
+2023-10-13 21:25:19,957 ERROR   SenderThread:91108 [sender.py:send_run():977] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\sender.py", line 975, in send_run
+    self._init_run(run, config_value_dict)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\sender.py", line 1013, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 1950, in upsert_run
+    self.server_settings_introspection()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 73, in wrapper
+    raise err
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\apis\normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 581, in server_settings_introspection
+    res = self.gql(query)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 338, in gql
+    ret = self._retry_gql(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\util.py", line 906, in no_retry_auth
+    raise CommError(
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-10-13 21:25:20,080 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:25,003 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:25,128 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:30,046 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:30,186 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:35,093 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:35,234 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:40,124 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:40,266 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:45,161 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:45,332 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:50,203 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:50,373 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:55,228 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:25:55,415 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:00,252 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:00,453 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:05,291 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:05,493 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:10,327 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:10,528 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:15,348 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:15,548 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:20,380 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:20,585 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:25,420 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:25,608 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:30,462 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:30,648 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:35,486 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:35,687 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:40,512 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:40,727 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:45,547 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:45,764 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:50,601 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:50,820 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:55,646 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:26:55,862 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:00,683 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:00,897 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:02,015 INFO    StreamThr :91108 [internal.py:wandb_internal():86] W&B internal server running at pid: 91108, started at: 2023-10-13 21:27:02.014217
+2023-10-13 21:27:02,016 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status
+2023-10-13 21:27:02,017 INFO    WriterThread:91108 [datastore.py:open_for_write():85] open: G:\project\fifth_try\wandb\run-20231013_212702-d8mwq5o7\run-d8mwq5o7.wandb
+2023-10-13 21:27:02,018 DEBUG   SenderThread:91108 [sender.py:send():380] send: header
+2023-10-13 21:27:02,018 DEBUG   SenderThread:91108 [sender.py:send():380] send: run
+2023-10-13 21:27:05,715 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:05,757 INFO    SenderThread:91108 [retry.py:__call__():172] Retry attempt failed:
+urllib3.exceptions.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy. Your proxy appears to only use HTTP and not HTTPS, try changing your proxy URL to be HTTP. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#https-proxy-error-http-proxy', SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)')))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy. Your proxy appears to only use HTTP and not HTTPS, try changing your proxy URL to be HTTP. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#https-proxy-error-http-proxy', SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)'))))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy. Your proxy appears to only use HTTP and not HTTPS, try changing your proxy URL to be HTTP. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#https-proxy-error-http-proxy', SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)'))))
+2023-10-13 21:27:05,919 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:07,064 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:10,742 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:10,945 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:12,096 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:15,787 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:15,987 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:17,127 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:20,821 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:21,023 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:22,170 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:25,865 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:26,067 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:27,194 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:30,893 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:31,097 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:32,234 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:35,934 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:36,134 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:37,261 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:40,959 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:41,158 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:42,309 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:45,985 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:46,217 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:47,340 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:51,032 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:51,267 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:52,386 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:27:56,079 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:56,297 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:27:57,417 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:01,115 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:01,331 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:02,447 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:06,144 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:06,360 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:07,479 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:11,164 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:11,383 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:12,515 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:16,199 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:16,416 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:17,555 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:21,242 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:21,460 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:22,594 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:26,281 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:26,497 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:27,636 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:28:31,328 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:31,548 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:32,677 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: cancel
+2023-10-13 21:28:32,678 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: cancel
+2023-10-13 21:28:32,678 DEBUG   SenderThread:91108 [sender.py:send():389] Record cancelled: run
+2023-10-13 21:28:32,678 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:36,374 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:36,579 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:37,720 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:41,404 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:41,607 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:42,751 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:46,442 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:46,647 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:47,788 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:51,471 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:51,689 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:52,818 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:56,503 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:56,720 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:28:57,848 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:01,552 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:01,772 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:02,906 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:06,599 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:06,800 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:07,318 INFO    StreamThr :91108 [internal.py:wandb_internal():86] W&B internal server running at pid: 91108, started at: 2023-10-13 21:29:07.317028
+2023-10-13 21:29:07,319 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status
+2023-10-13 21:29:07,321 INFO    WriterThread:91108 [datastore.py:open_for_write():85] open: G:\project\fifth_try\wandb\run-20231013_212907-qkvmteka\run-qkvmteka.wandb
+2023-10-13 21:29:07,323 DEBUG   SenderThread:91108 [sender.py:send():380] send: header
+2023-10-13 21:29:07,323 DEBUG   SenderThread:91108 [sender.py:send():380] send: run
+2023-10-13 21:29:07,927 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:11,406 INFO    SenderThread:91108 [retry.py:__call__():172] Retry attempt failed:
+urllib3.exceptions.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy. Your proxy appears to only use HTTP and not HTTPS, try changing your proxy URL to be HTTP. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#https-proxy-error-http-proxy', SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)')))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\urllib3\util\retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy. Your proxy appears to only use HTTP and not HTTPS, try changing your proxy URL to be HTTP. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#https-proxy-error-http-proxy', SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)'))))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\internal\internal_api.py", line 366, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\requests\adapters.py", line 513, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Unable to connect to proxy. Your proxy appears to only use HTTP and not HTTPS, try changing your proxy URL to be HTTP. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#https-proxy-error-http-proxy', SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:997)'))))
+2023-10-13 21:29:11,626 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:11,843 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:12,352 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:12,958 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:16,662 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:16,879 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:17,406 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:17,994 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:21,691 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:21,924 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:22,450 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:23,019 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:26,728 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:26,944 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:27,480 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:28,038 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:31,763 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:31,977 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:32,506 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:33,081 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:36,799 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:37,014 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:37,555 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:38,132 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:41,843 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:42,064 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:42,607 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:43,175 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:46,885 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:47,117 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:47,656 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:48,214 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:51,916 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:52,161 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:52,696 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:53,268 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:56,942 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:57,205 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:29:57,735 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:29:58,305 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:01,983 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:02,229 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:02,769 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:30:03,329 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:07,030 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:07,263 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:07,802 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-13 21:30:08,361 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:12,064 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:12,297 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report
+2023-10-13 21:30:13,396 DEBUG   HandlerThread:91108 [handler.py:handle_request():146] handle_request: status_report

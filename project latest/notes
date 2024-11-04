@@ -1,0 +1,63 @@
+ROS Parameter Server ==> 
+1_Nodes use this server to store and retrieve parameters at runtime.
+2_As it is not designed for high-performance, it is best used for static, non-binary data such as configuration parameters.
+
+
+
+ali@ali:~$ rostopic list
+/camera/depth/camera_info
+/camera/depth/image_raw
+/camera/depth/points
+/camera/parameter_descriptions
+/camera/parameter_updates
+/camera/rgb/camera_info
+/camera/rgb/image_raw
+/camera/rgb/image_raw/compressed
+/camera/rgb/image_raw/compressed/parameter_descriptions
+/camera/rgb/image_raw/compressed/parameter_updates
+/camera/rgb/image_raw/compressedDepth
+/camera/rgb/image_raw/compressedDepth/parameter_descriptions
+/camera/rgb/image_raw/compressedDepth/parameter_updates
+/camera/rgb/image_raw/theora
+/camera/rgb/image_raw/theora/parameter_descriptions
+/camera/rgb/image_raw/theora/parameter_updates
+/clock
+/cmd_vel
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/gazebo/performance_metrics
+/gazebo/set_link_state
+/gazebo/set_model_state
+/imu
+/joint_states
+/odom
+/rosout
+/rosout_agg
+/scan
+/tf
+
+
+../src/intel/isl/isl.c:2105: FINISHME: ../src/intel/isl/isl.c:isl_surf_supports_ccs: CCS for 3D textures is disabled, but a workaround is available.
+
+catkin_create_pkg my_robot_controller [dependencies <rospy roscpp turtlesim>]
+# this creats a foulder named my_robot_controller and is your package directory
+#in scripts directory inside the package directory create my_first_node.py ==> chmode
+rosrun my_robot_controller my_first_node.py
+
+$ rosrun my_robot_controller my_robot_controller.py 
+
+
+
+
+ali@ali:~/catkin_ws/src/my_robot_controller/scripts$ rostopic info /camera/rgb/image_raw
+Type: sensor_msgs/Image
+
+Publishers: 
+ * /gazebo (http://localhost:39783/)
+
+Subscribers: None
+
+$(find gazebo_ros) ==> /opt/ros/noetic/share/gazebo_ros/
+

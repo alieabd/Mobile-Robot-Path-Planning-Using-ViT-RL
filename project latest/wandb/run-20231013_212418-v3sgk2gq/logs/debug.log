@@ -1,0 +1,124 @@
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Configure stats pid to 94148
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from C:\Users\imali\.config\wandb\settings
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from G:\project\fifth_try\wandb\settings
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-10-13 21:24:18,807 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-13 21:24:18,808 INFO    MainThread:94148 [wandb_init.py:_log_setup():528] Logging user logs to G:\project\fifth_try\wandb\run-20231013_212418-v3sgk2gq\logs\debug.log
+2023-10-13 21:24:18,808 INFO    MainThread:94148 [wandb_init.py:_log_setup():529] Logging internal logs to G:\project\fifth_try\wandb\run-20231013_212418-v3sgk2gq\logs\debug-internal.log
+2023-10-13 21:24:18,808 INFO    MainThread:94148 [wandb_init.py:init():568] calling init triggers
+2023-10-13 21:24:18,808 INFO    MainThread:94148 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2023-10-13 21:24:18,808 INFO    MainThread:94148 [wandb_init.py:init():618] starting backend
+2023-10-13 21:24:18,808 INFO    MainThread:94148 [wandb_init.py:init():622] setting up manager
+2023-10-13 21:24:18,809 INFO    MainThread:94148 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-10-13 21:24:18,811 INFO    MainThread:94148 [wandb_init.py:init():628] backend started and connected
+2023-10-13 21:24:18,813 INFO    MainThread:94148 [wandb_init.py:init():720] updated telemetry
+2023-10-13 21:24:18,814 INFO    MainThread:94148 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-10-13 21:24:19,557 ERROR   MainThread:94148 [wandb_init.py:init():779] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-10-13 21:24:21,057 ERROR   MainThread:94148 [wandb_init.py:init():1188] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 1170, in init
+    run = wi.init()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Configure stats pid to 94148
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from C:\Users\imali\.config\wandb\settings
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from G:\project\fifth_try\wandb\settings
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-13 21:25:19,183 INFO    MainThread:94148 [wandb_init.py:_log_setup():528] Logging user logs to G:\project\fifth_try\wandb\run-20231013_212519-0483meln\logs\debug.log
+2023-10-13 21:25:19,184 INFO    MainThread:94148 [wandb_init.py:_log_setup():529] Logging internal logs to G:\project\fifth_try\wandb\run-20231013_212519-0483meln\logs\debug-internal.log
+2023-10-13 21:25:19,184 INFO    MainThread:94148 [wandb_init.py:init():568] calling init triggers
+2023-10-13 21:25:19,184 INFO    MainThread:94148 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2023-10-13 21:25:19,184 INFO    MainThread:94148 [wandb_init.py:init():618] starting backend
+2023-10-13 21:25:19,184 INFO    MainThread:94148 [wandb_init.py:init():622] setting up manager
+2023-10-13 21:25:19,185 INFO    MainThread:94148 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-10-13 21:25:19,186 INFO    MainThread:94148 [wandb_init.py:init():628] backend started and connected
+2023-10-13 21:25:19,187 INFO    MainThread:94148 [wandb_init.py:init():720] updated telemetry
+2023-10-13 21:25:19,188 INFO    MainThread:94148 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-10-13 21:25:19,958 ERROR   MainThread:94148 [wandb_init.py:init():779] encountered error: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-10-13 21:25:21,583 ERROR   MainThread:94148 [wandb_init.py:init():1188] It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 1170, in init
+    run = wi.init()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: It appears that you do not have permission to access the requested resource. Please reach out to the project owner to grant you access. If you have the correct permissions, verify that there are no issues with your networking setup.(Error 403: Forbidden)
+2023-10-13 21:27:02,010 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-10-13 21:27:02,010 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Configure stats pid to 94148
+2023-10-13 21:27:02,010 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from C:\Users\imali\.config\wandb\settings
+2023-10-13 21:27:02,010 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from G:\project\fifth_try\wandb\settings
+2023-10-13 21:27:02,010 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-10-13 21:27:02,010 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_init.py:_log_setup():528] Logging user logs to G:\project\fifth_try\wandb\run-20231013_212702-d8mwq5o7\logs\debug.log
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_init.py:_log_setup():529] Logging internal logs to G:\project\fifth_try\wandb\run-20231013_212702-d8mwq5o7\logs\debug-internal.log
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_init.py:init():568] calling init triggers
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_init.py:init():618] starting backend
+2023-10-13 21:27:02,011 INFO    MainThread:94148 [wandb_init.py:init():622] setting up manager
+2023-10-13 21:27:02,013 INFO    MainThread:94148 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-10-13 21:27:02,013 INFO    MainThread:94148 [wandb_init.py:init():628] backend started and connected
+2023-10-13 21:27:02,015 INFO    MainThread:94148 [wandb_init.py:init():720] updated telemetry
+2023-10-13 21:27:02,016 INFO    MainThread:94148 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-10-13 21:28:32,677 ERROR   MainThread:94148 [wandb_init.py:init():779] encountered error: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2023-10-13 21:28:34,125 ERROR   MainThread:94148 [wandb_init.py:init():1188] Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 1170, in init
+    run = wi.init()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 785, in init
+    raise error
+wandb.errors.CommError: Run initialization has timed out after 90.0 sec. 
+Please refer to the documentation for additional information: https://docs.wandb.ai/guides/track/tracking-faq#initstarterror-error-communicating-with-wandb-process-
+2023-10-13 21:29:07,312 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Current SDK version is 0.15.12
+2023-10-13 21:29:07,313 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Configure stats pid to 94148
+2023-10-13 21:29:07,313 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from C:\Users\imali\.config\wandb\settings
+2023-10-13 21:29:07,313 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from G:\project\fifth_try\wandb\settings
+2023-10-13 21:29:07,313 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-10-13 21:29:07,313 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_init.py:_log_setup():528] Logging user logs to G:\project\fifth_try\wandb\run-20231013_212907-qkvmteka\logs\debug.log
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_init.py:_log_setup():529] Logging internal logs to G:\project\fifth_try\wandb\run-20231013_212907-qkvmteka\logs\debug-internal.log
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_init.py:init():568] calling init triggers
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_init.py:init():575] wandb.init called with sweep_config: {}
+config: {'learning_rate': 0.02, 'architecture': 'CNN', 'dataset': 'CIFAR-100', 'epochs': 10}
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_init.py:init():618] starting backend
+2023-10-13 21:29:07,314 INFO    MainThread:94148 [wandb_init.py:init():622] setting up manager
+2023-10-13 21:29:07,316 INFO    MainThread:94148 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=spawn, using: spawn
+2023-10-13 21:29:07,316 INFO    MainThread:94148 [wandb_init.py:init():628] backend started and connected
+2023-10-13 21:29:07,318 INFO    MainThread:94148 [wandb_init.py:init():720] updated telemetry
+2023-10-13 21:29:07,319 INFO    MainThread:94148 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2023-10-13 21:30:12,839 WARNING MainThread:94148 [wandb_init.py:init():1192] interrupted
+Traceback (most recent call last):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 1170, in init
+    run = wi.init()
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\wandb_init.py", line 756, in init
+    result = run_init_handle.wait(
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\site-packages\wandb\sdk\lib\mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\threading.py", line 600, in wait
+    signaled = self._cond.wait(timeout)
+  File "C:\Users\imali\miniconda3\envs\pytorch\lib\threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2023-10-13 21:30:16,847 WARNING MsgRouterThr:94148 [router.py:message_loop():77] message_loop has been closed
+2023-10-13 21:30:16,848 WARNING MsgRouterThr:94148 [router.py:message_loop():77] message_loop has been closed
+2023-10-13 21:30:16,848 WARNING MsgRouterThr:94148 [router.py:message_loop():77] message_loop has been closed
+2023-10-13 21:30:16,848 WARNING MsgRouterThr:94148 [router.py:message_loop():77] message_loop has been closed
